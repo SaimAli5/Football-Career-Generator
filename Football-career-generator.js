@@ -1,3 +1,5 @@
+let butt = document.querySelector('button')
+
 // 4 carrer aspect's data
 let playerPosition = ["Forward","Midfilder","Defender","GoalKeeper"]
 let careerStats = { 
@@ -51,9 +53,14 @@ const nickNameGen = ()=>{
     }
 }
 
-console.log("You retired as a Proffesional Football Player")
-console.log("")
-console.log(positionGen())
-console.log(jerseyNumGen())
-console.log(statsGen())
-console.log(nickNameGen())
+
+let varOutput = ['',positionGen(),jerseyNumGen(),statsGen(),nickNameGen()]
+
+
+const test = () =>{
+    document.getElementById('result').innerHTML = varOutput.join('\r \n');
+}
+
+
+
+butt.addEventListener('click', test);
